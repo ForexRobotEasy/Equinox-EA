@@ -1,0 +1,90 @@
+
+// Equinox EA - Forex Robot Easy
+// Developer's Site: forexroboteasy.com
+// Developer: Forex Robot Easy Team
+
+// Include necessary libraries
+#include <Trade\Trade.mqh>
+
+// Define the main strategy pairs
+string[] strategyPairs = {'AUDCAD', 'AUDNZD', 'NZDCAD'};
+
+// Define the main function
+void OnTick()
+{
+    // Retrieve and process market data
+    if (RetrieveMarketData(strategyPairs))
+    {
+        // Apply the selected strategy
+        if (ApplyStrategy())
+        {
+            // Generate trading signals
+            if (GenerateSignals())
+            {
+                // Open and close trades based on signals
+                ExecuteTrades();
+            }
+        }
+    }
+}
+
+// Function to retrieve and process market data
+bool RetrieveMarketData(string[] pairs)
+{
+    // Implement code to retrieve and process market data for each pair
+    // ...
+    // ...
+    return true; // Return true if data retrieval is successful
+}
+
+// Function to apply the selected strategy
+bool ApplyStrategy()
+{
+    // Implement code to apply the selected strategy to the market data
+    // ...
+    // ...
+    return true; // Return true if strategy application is successful
+}
+
+// Function to generate trading signals
+bool GenerateSignals()
+{
+    // Implement code to generate trading signals based on the applied strategy
+    // ...
+    // ...
+    return true; // Return true if signal generation is successful
+}
+
+// Function to execute trades based on signals
+void ExecuteTrades()
+{
+    // Implement code to open and close trades based on the generated signals
+    // ...
+    // ...
+}
+
+// Risk management functions
+// ...
+
+// Error handling and logging mechanisms
+// ...
+
+// Other necessary functions and utilities
+// ...
+
+// Test the code
+int OnInit()
+{
+    // Implement code to test the code extensively and ensure its reliability and accuracy
+    // ...
+    // ...
+    return INIT_SUCCEEDED; // Return INIT_SUCCEEDED if initialization is successful
+}
+
+// Clean up resources
+void OnDeinit(const int reason)
+{
+    // Implement code to clean up any used resources
+    // ...
+    // ...
+}
